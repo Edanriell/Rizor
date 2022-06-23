@@ -1,2 +1,2 @@
-# Skincare
-![Skincare](https://github.com/Edanriell/oldProjects-2/blob/master/AnimatedText/skincare.png?raw=true)
+# Rizor
+![Rizor](https://github.com/Edanriell/Rizor/blob/master/Rizor.png?raw=true)

@@ -1,0 +1,28 @@
+.Accumulator
+    grid-area: accumulator
+    display: flex
+    flex-direction: column
+    &-Header
+        margin-top: 4rem
+    &-Image
+        order: -2
+        position: relative
+        &::after
+            position: absolute
+            content: ""
+            display: block
+            top: 14rem
+            left: 37rem
+            width: 8.6rem
+            height: 25.6rem
+            background: url("./../images/accumulator-arrow.png") no-repeat center
+    &-Text
+        margin-top: 2rem
+    &-DescriptionList
+        justify-content: flex-end !important
+        order: -1
+        margin-top: -6.4rem !important
+    &-DescriptionListColumn
+        margin-right: 4rem !important
+        &:last-child
+            padding-right: 3rem

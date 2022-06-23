@@ -1,0 +1,177 @@
+.Modal
+    position: absolute
+    width: 1200px
+    height: 700px
+    border-radius: 10px
+    background: rgba(255, 255, 255, 1)
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px
+    z-index: 120
+    overflow: hidden
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "content slider"
+    &-CloseButton
+        position: absolute
+        top: 3rem
+        right: 4rem
+        width: 3rem
+        height: 3rem
+        background: svg-load("./../images/icons/close-modal.svg", fill=#FFF) no-repeat transparent
+        background-position: center center
+        background-size: 3rem 3rem
+        cursor: pointer
+.ModalUnderlay
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0, 0.5)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 120
+    display: none
+.ModalContent
+    grid-area: content
+    padding: 8rem
+    &-Header
+        font-family: var(--bold-font)
+        font-size: 3.8rem
+        margin-top: 2rem
+    &-Text
+        font-family: var(--light-font)
+        font-size: 1.8rem
+        margin-top: 1rem
+.ModalForm
+    padding-top: 5rem
+    &-Field
+        display: grid
+        grid-template-columns: 14rem 1fr
+        grid-template-areas: "label input"
+        column-gap: 3rem
+        position: relative
+    &-InputNameLabel
+        font-family: var(--medium-font)
+        font-size: 1.4rem
+        grid-area: label
+    &-NameInput
+        font-family: var(--light-font)
+        font-size: 1.4rem
+        grid-area: input
+        border: 2px solid #f0f0f0
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px
+        height: 3.5rem
+        border-radius: 1rem
+        margin-bottom: 2rem
+        padding-left: 1rem
+        padding-right: 1rem
+        &::placeholder
+            color: var(--main)
+            opacity: 80%
+    &-InputAddressLabel
+        font-family: var(--medium-font)
+        font-size: 1.4rem
+        grid-area: label
+    &-AddressInput
+        font-family: var(--light-font)
+        font-size: 1.4rem
+        grid-area: input
+        border: 2px solid #f0f0f0
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px
+        height: 3.5rem
+        border-radius: 1rem
+        margin-bottom: 2rem
+        padding-left: 1rem
+        padding-right: 1rem
+        &::placeholder
+            color: #000
+            opacity: 80%
+    &-InputEmailLabel
+        font-family: var(--medium-font)
+        font-size: 1.4rem
+        grid-area: label
+    &-EmailInput
+        font-family: var(--light-font)
+        font-size: 1.4rem
+        grid-area: input
+        border: 2px solid #f0f0f0
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px
+        height: 3.5rem
+        border-radius: 1rem
+        margin-bottom: 2rem
+        padding-left: 1rem
+        padding-right: 1rem
+        &::placeholder
+            color: #000
+            opacity: 80%
+    &-InputPhoneLabel
+        font-family: var(--medium-font)
+        font-size: 1.4rem
+        grid-area: label
+    &-PhoneInput
+        font-family: var(--light-font)
+        font-size: 1.4rem
+        grid-area: input
+        border: 2px solid #f0f0f0
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px
+        height: 3.5rem
+        border-radius: 1rem
+        margin-bottom: 2rem
+        padding-left: 1rem
+        padding-right: 1rem
+        &::placeholder
+            color: var(--main)
+            opacity: 80%
+    &-TermsAndConditions
+        +flex(center, flex-end, row-reverse)
+        font-size: 1.4rem
+        margin-top: 2rem
+    &-TermsAndConditionsCheckbox
+        margin-right: 1.6rem
+    &-SubmitButton
+        margin-top: 4rem
+        display: block
+        margin-left: auto
+        background: var(--secondary)
+        color: var(--white)
+        font-family: var(--medium-font)
+        font-size: 1.4rem
+        cursor: pointer
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px
+        width: 15rem
+        height: 3.5rem
+        border-radius: 1rem
+        outline: 1px solid #000
+        box-sizing: border-box
+        position: relative
+        transition: all 0.3s var(--easing-function)
+        &:hover
+            transform: scale(1.06)
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 35px
+.ModalSlider
+    width: 100%
+    grid-area: slider
+    &-Wrapper
+        position: relative
+    &-Slide
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 22px
+        font-weight: bold
+        color: var(--white)
+    &-Image > img
+        object-fit: cover
+        height: 100rem
+        width: 60rem
+    &-Text
+        position: absolute
+        font-size: 4.6rem
+        color: var(--white)
+        text-transform: uppercase
+        font-family: var(--black-font)
+        text-align: center
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1)

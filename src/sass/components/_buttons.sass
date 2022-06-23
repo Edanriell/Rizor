@@ -1,0 +1,31 @@
+.Button
+    width: 27rem
+    height: 5rem
+    border-radius: 3rem
+    box-shadow: var(--main-shadow)
+    text-transform: uppercase
+    font-family: var(--black-font)
+    font-size: 1.6rem
+    cursor: pointer
+    z-index: 2
+    position: relative
+    &_color_white
+        background: var(--white)
+        color: var(--secondary)
+        justify-self: center
+        grid-column: 1 / -1
+        margin-top: 3rem
+        transition: all 0.3s var(--easing-function)
+        &:hover
+            transform: scale(1.06)
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 35px
+    &_color_blue
+        background: var(--secondary)
+        color: var(--white)
+        grid-column: 7 / -1
+        margin-top: 3rem
+        +flex(center, center, row)
+        transition: all 0.3s var(--easing-function)
+        &:hover
+            transform: scale(1.06)
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 35px

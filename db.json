@@ -1,0 +1,23 @@
+{
+	"reviews": [
+		{
+			"author": "Test",
+			"overall-score": "5",
+			"reliability-score": "5",
+			"safety-score": "4",
+			"appearance-score": "5",
+			"review-text": "TEST2222",
+			"id": 1
+		}
+	],
+	"customers": [
+		{
+			"customer-name": "TEST",
+			"customer-address": "TEST22",
+			"customer-email": "test@ju2st.test",
+			"customer-phone": "+4564564",
+			"terms-and-conditions": "on",
+			"id": 1
+		}
+	]
+}

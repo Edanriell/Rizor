@@ -1,0 +1,22 @@
+.StyledDescriptionList
+    +flex(center, flex-start, row)
+    margin-top: 8rem
+    &-Column
+        +flex(flex-start, center, column-reverse)
+        &:first-child
+            margin-right: 6rem
+    &-Name
+        font-size: 1.4rem
+        color: var(--main)
+        opacity: 80%
+        font-family: var(--light-font)
+        width: 11rem
+        margin-top: 1rem
+    &-Value
+        font-size: var(--huge-text)
+        color: var(--secondary)
+        font-family: var(--black-font)
+        line-height: 1
+        > span
+            font-size: 3rem
+            line-height: 1

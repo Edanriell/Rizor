@@ -1,0 +1,50 @@
+.Colors
+    grid-area: color
+    position: relative
+    padding-bottom: 33.5rem
+    &-Header
+        margin-bottom: var(--subheader-margin)
+    &-Image
+        width: 37.4rem
+        height: 30rem
+        bottom: 0
+        right: 0
+        position: absolute
+        &::after
+            content: ""
+            width: 2.1rem
+            height: 29.4rem
+            background: url("./../images/large-arrow.png") no-repeat center
+            top: -22rem
+            left: 5rem
+            position: absolute
+.ColorsList
+    +flex(center, space-around, row)
+    margin-top: 5rem
+    &-ActiveColor
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            bottom: -6rem
+            left: 50%
+            width: 0.5rem
+            height: 4.9rem
+            transform: translateX(-50%)
+            background: url("./../images/color-arrow.png") center no-repeat
+.ColorButton
+    width: 2rem
+    height: 2rem
+    border-radius: 50%
+    cursor: pointer
+    &_color_yellow
+        background: #e1e838
+    &_color_blue
+        background: #00b6f0
+    &_color_red
+        background: #e23232
+    &_color_gray
+        background: #efefef
+    &_color_black
+        background: #0c0c0c
+        position: relative

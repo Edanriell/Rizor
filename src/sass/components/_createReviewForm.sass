@@ -1,0 +1,93 @@
+.CreateReviewForm
+    display: grid
+    grid-template-columns: 27rem 27rem 57rem
+    gap: 3rem 3rem
+    grid-template-rows: repeat(3, auto)
+    grid-template-areas: "author author textarea" "overallScore reliabilityScore textarea" "safetyScore appearanceScore textarea"
+    padding-top: 5rem
+    &-Author
+        grid-area: author
+        +flex(flex-start, center, column)
+        position: relative
+        input
+            width: 51rem
+    &-OverallScore
+        grid-area: overallScore
+        +flex(flex-start, center, column)
+        position: relative
+        select
+            width: 21rem
+    &-ReliabilityScore
+        grid-area: reliabilityScore
+        +flex(flex-start, center, column)
+        position: relative
+        select
+            width: 21rem
+    &-SafetyScore
+        grid-area: safetyScore
+        +flex(flex-start, center, column)
+        position: relative
+        select
+            width: 21rem
+    &-AppearanceScore
+        grid-area: appearanceScore
+        +flex(flex-start, center, column)
+        position: relative
+        select
+            width: 21rem
+    &-ReviewText
+        grid-area: textarea
+        +flex(flex-start, center, column)
+        position: relative
+        > label
+            top: -1.3rem
+    &-Label
+        position: absolute
+        top: -1rem 
+        left: 2rem
+        color: var(--white)
+        font-size: 1.6rem
+        font-family: var(--light-font)
+        background: var(--secondary)
+        padding-left: 1rem
+        padding-right: 1rem
+    &-Input
+        all: unset
+        padding-left: 3rem
+        padding-right: 3rem
+        outline: 1px solid var(--white)
+        height: 7rem
+        font-size: 2.6rem
+        font-family: var(--black-font)
+        color: var(--white)
+        +flex(center, center, row)
+        &::placeholder
+            opacity: 100%
+    &-Select
+        all: unset
+        padding-left: 3rem
+        padding-right: 3rem
+        outline: 1px solid var(--white)
+        height: 7rem
+        font-size: 2.6rem
+        font-family: var(--black-font)
+        color: var(--white)
+        +flex(center, center, row)
+        background: svg-load("./../images/icons/select-chevron.svg", fill=#FFF) no-repeat
+        background-size: 3.1rem 2.2rem
+        background-position: 22rem center
+        &::placeholder
+            opacity: 100%
+        > option
+            background: var(--secondary)
+    &-Textarea
+        all: unset
+        width: 51rem
+        outline: 1px solid var(--white)
+        height: 21rem
+        font-size: 2.6rem
+        font-family: var(--black-font)
+        color: var(--white)
+        padding: 3rem
+        &::placeholder
+            opacity: 100%

@@ -1,0 +1,81 @@
+.ProductFeatures
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: 6rem auto
+    grid-template-areas: "header header header header header header header . . . . ." ". . . . . features features features features features features ."
+    column-gap: 3rem
+    padding-bottom: 28rem
+    &-SubHeader
+        grid-area: header
+    &-Image
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -2
+    &::before
+        @extend %backgroundText
+        top: -12rem
+.MainFeatures
+    grid-area: features
+    +flex(flex-start, flex-start, row)
+    flex-wrap: wrap
+    margin-top: 10rem
+    &-FeatureContent
+        width: 25rem
+        &:nth-child(1)
+            margin-right: 7rem
+            margin-bottom: 8rem
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                top: -3rem
+                left: -4rem
+                width: 8.9rem
+                height: 6.7rem
+                background: url("./../images/icons/icon-1.png") no-repeat center
+                z-index: -2
+        &:nth-child(2)
+            margin-bottom: 8rem
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                top: -3rem
+                left: -4rem
+                width: 7rem
+                height: 7rem
+                background: url("./../images/icons/icon-2.png") no-repeat center
+                z-index: -2
+        &:nth-child(3)
+            margin-right: 7rem
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                top: -3rem
+                left: -4rem
+                width: 6.6rem
+                height: 5.3rem
+                background: url("./../images/icons/icon-3.png") no-repeat center
+                z-index: -2
+        &:nth-child(4)
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                top: -3rem
+                left: -4rem
+                width: 6.2rem
+                height: 6.8rem
+                background: url("./../images/icons/icon-4.png") no-repeat center
+                z-index: -2
+    &-FeatureName
+        text-transform: uppercase
+        font-family: var(--black-font)
+        margin-bottom: 1.4rem
+        font-size: var(--medium-text)
+    &-FeatureDescription
+        font-size: var(--very-small-text)
+
+        

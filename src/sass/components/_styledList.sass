@@ -1,0 +1,16 @@
+.StyledList
+    +flex(flex-start, center, column)
+    margin-top: 2.5rem
+    &-Item
+        position: relative
+        +flex(flex-start, flex-start, row)
+        margin-bottom: var(--subheader-margin)
+        &::before
+            flex: 0 0 3rem
+            content: ""
+            display: inline-block
+            height: 0.5rem
+            width: 3rem
+            background: var(--main)
+            margin-right: 1rem
+            margin-top: 1rem

@@ -1,0 +1,58 @@
+.ModelComparison
+    position: relative
+    padding-top: 10rem
+    padding-bottom: 12rem
+    &-Content
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-gap: 3rem
+        grid-template-rows: repeat(2, auto)
+        grid-template-areas: ". . . . . . header header header header . ." ". . . . . . table table table table table table"
+    &-Header
+        grid-area: header
+        margin-bottom: 3rem
+    &-Image
+        position: absolute
+        top: -4rem
+        left: 0
+        box-shadow: var(--main-shadow)
+        width: 84.5rem
+        height: 80rem
+.ModelsTable
+    grid-area: table
+    display: grid
+    grid-template-columns: repeat(3, 17rem)
+    grid-template-rows: repeat(2, auto)
+    grid-template-areas: ". header header" "body body body"
+    grid-gap: 1rem
+    &-TableHeader
+        grid-area: header
+        th:nth-child(2)
+            padding-left: 2rem
+        th:nth-child(3)
+            padding-left: 13rem
+    &-ModelVersion
+        font-size: 4.5rem
+        font-family: var(--black-font)
+        color: var(--main)
+        text-align: left
+    &-TableBody
+        grid-area: body
+    &-TableRow
+        display: grid
+        grid-template-columns: repeat(3, 17rem)
+        column-gap: 3rem
+        padding-top: 2rem
+        padding-bottom: 1rem
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3)
+        &:last-child
+            border-bottom: none
+    &-ModelParameter
+        font-size: 1.8rem
+        font-family: var(--light-font)
+        color: var(--main)
+        opacity: 60%
+    &-ModelParameterValue
+        color: var(--main)
+        font-family: var(--bold-font)
+        font-size: 1.8rem

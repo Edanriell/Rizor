@@ -1,0 +1,52 @@
+.CustomerReviews
+    padding-bottom: 7rem
+    &-Header
+        color: var(--sectionAccentText)
+        margin-bottom: 6rem
+        padding-left: 11.5rem
+.Review
+    width: 97rem
+    height: 38rem
+    background: var(--white)
+    display: grid
+    grid-template-columns: 37rem 57rem
+    column-gap: 3rem
+    grid-template-rows: repeat(3, auto)
+    grid-template-areas: "image name" "image text" "image rating"
+    margin-right: 1.5rem
+    margin-left: 1.5rem
+    &-AuthorPicture
+        grid-area: image
+        height: 38rem
+        width: 37rem
+        object-fit: cover
+    &-AuthorName
+        grid-area: name
+        text-transform: uppercase
+        font-size: 2rem
+        color: var(--main)
+        margin-top: 5rem
+        display: inline-block
+    &-Text
+        grid-area: text
+        color: var(--main)
+        font-size: 1.6rem
+        opacity: 90%
+        display: inline-block
+        max-width: 50rem
+.Rating
+    grid-area: rating
+    +flex(center, flex-start, row)
+    margin-bottom: 3rem
+    &-Column
+        +flex(center, center, column-reverse)
+        margin-right: 3rem
+    &-Position
+        font-size: 1.6rem
+        color: var(--main)
+        opacity: 60%
+    &-Mark
+        font-size: 9rem
+        line-height: 1
+        color: var(--secondary)
+        font-family: var(--black-font)

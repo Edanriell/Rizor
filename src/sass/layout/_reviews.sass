@@ -1,0 +1,33 @@
+.Reviews
+    background: var(--secondary)
+    padding-top: 6rem
+    padding-bottom: 13rem
+    position: relative
+    &-DecorativeImage
+        position: absolute
+        display: block
+        top: -58rem
+        left: 0
+        width: 51.1rem
+        height: 87.8rem
+        background: url("./../images/bg.png") no-repeat
+        opacity: 10%
+        z-index: 1
+    &::before
+        content: "4.0 Rizor"
+        position: absolute
+        bottom: 0
+        right: 10rem
+        text-transform: uppercase
+        font-size: 22rem
+        line-height: 1
+        color: var(--white)
+        text-align: right
+        font-family: var(--black-font)
+        letter-spacing: 1.4rem
+        opacity: 10%
+        width: 100rem
+    &-Header
+        color: var(--sectionAccentText)
+        margin-bottom: 5.5rem
+        padding-left: 11.5rem

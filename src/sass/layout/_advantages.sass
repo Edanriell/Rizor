@@ -1,0 +1,16 @@
+.Advantages
+    margin-top: 20rem
+    margin-bottom: 23.5rem
+    position: relative
+    &-Content
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-template-rows: auto auto 9rem auto 11rem auto auto auto
+        grid-template-areas: ". . . . . header header . . . . ." ". . . . . design design design . . . ." ". . . . . design design design . color color color " ". . . . . . . . . color color color" " . . indicators indicators indicators indicators indicators . . color color color" ". . indicators indicators indicators indicators indicators . . . . ." "modes modes modes modes . . . . . . . ." "accumulator accumulator accumulator accumulator accumulator . . technology technology technology technology ."
+        column-gap: 3rem
+    &-Header
+        grid-area: header
+        margin-top: 10rem
+        margin-bottom: 7rem
+    &::before
+        @extend %backgroundText

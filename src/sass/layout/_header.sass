@@ -1,0 +1,48 @@
+.Header
+    padding-top: 3rem
+    padding-bottom: 4rem
+.MainNavigation
+    +flex(center, space-between, row)
+    &-Logotype
+        width: 15.6rem
+        height: 3.9rem
+.Menu
+    +flex(center, space-between, row)
+    &-Item
+        margin-right: 7rem
+        display: inline-block
+        position: relative
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            left: -1rem
+            bottom: 0
+            height: 1px
+            width: 0
+            transition: width 0s var(--easing-function), background .5s var(--easing-function)
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            left: -1rem
+            bottom: 0
+            height: 0.1rem
+            width: 0
+            background: #3366FF
+            transition: width .5s var(--easing-function)
+        &:hover::before
+            width: 2rem
+            background: #3366FF
+            transition: width .5s var(--easing-function)
+        &:hover::after
+            width: 2rem
+            background: transparent
+            transition: all 0s var(--easing-function)
+        &:last-child
+            margin-right: 0
+    &-Link
+        text-transform: uppercase
+        font-family: var(--black-font)
+        font-size: 1.4rem
+        color: var(--main)

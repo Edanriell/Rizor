@@ -1,0 +1,58 @@
+.AboutCustomers
+    background-color: var(--secondary)
+    &-Content
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-template-rows: repeat(4, auto)
+        grid-template-areas: "header header header . . . . . . . . ." "text text text text . . . . . . . ." "text2 text2 text2 text2 . . . . . . . ." "customers customers customers . . . . . . . . ."
+        column-gap: 3rem
+        padding-top: 10rem
+        padding-bottom: 24rem
+    &-Header
+        grid-area: header
+        margin-bottom: 2rem
+        color: var(--light)
+    &-Text
+        color: var(--light)
+        font-family: var(--light-font)
+        &:nth-child(3)
+            grid-area: text2
+        &:nth-child(2)
+            grid-area: text
+            margin-bottom: 2rem
+    &-Image
+        position: absolute
+        bottom: 17rem
+        right: 0
+        box-shadow: var(--main-shadow)
+        &::after
+            @extend %backgroundImageText
+.MainCustomers
+    grid-area: customers
+    +flex(center, flex-start, row)
+    margin-top: 7.5rem
+    z-index: 10
+    &-Customer
+        +flex(flex-start, center, column)
+        font-family: var(--light-font)
+        font-size: var(--very-small-text)
+        line-height: 1
+        color: var(--light)
+        width: 10rem
+        &:first-child
+            margin-right: 10rem
+        &:nth-child(1)::before
+            content: ""
+            display: block
+            background: url("./../images/icons/family.svg") no-repeat center
+            width: 9rem
+            height: 5.9rem
+        &:nth-child(2)::before
+            content: ""
+            display: block
+            background: url("./../images/icons/safety.svg") no-repeat center
+            width: 7.6rem
+            height: 5.7rem
+        > span
+            opacity: 60%
+            margin-top: 2rem

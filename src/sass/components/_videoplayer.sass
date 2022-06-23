@@ -1,0 +1,60 @@
+.VideoPlayerBig
+    position: absolute
+    &-Player
+        width: inherit
+        height: inherit
+    &-PlayButton
+        position: absolute
+        top: 7.5rem
+        left: -7rem
+        display: flex
+        flex-direction: row
+        gap: 0.5rem
+        cursor: pointer
+        z-index: 2
+        &::after
+            content: ""
+            width: 6.3rem
+            height: 6.9rem
+            top: 0
+            left: 0
+            background: gray
+            background: url("./../images/icons/video-button.svg") center no-repeat
+            filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.45))
+        &::before
+            content: ""
+            width: 1.8rem
+            height: 7.3rem
+            position: absolute
+            top: 7.8rem
+            left: -0.8rem
+            background: url("./../images/button-arrow.png") no-repeat center
+        > span
+            color: var(--main)
+            writing-mode: vertical-rl
+            text-orientation: mixed
+            transform: rotate(180deg)
+            height: 6.9rem
+            font-family: var(--bold-font)
+            font-size: 1.4rem
+            text-align: left
+.VideoPlayer
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -2
+    &-Player
+        width: inherit
+        height: inherit
+    &-PlayButton
+        width: 10rem
+        height: 10rem
+        border-radius: 50%
+        background: url("./../images/icons/video-button-2.svg") no-repeat rgba(255, 255, 255, 0.8)
+        background-position: 55% 50%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        z-index: 2

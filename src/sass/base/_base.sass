@@ -1,0 +1,24 @@
+body
+    font-family: var(--main-font)
+    font-style: normal
+    font-size: var(--main-text)
+    font-weight: var(--font-normal)
+    color: var(--main)
+    background: url("./../images/bg.png") no-repeat, url("./../images/bg.png") no-repeat, url("./../images/bg2.png") no-repeat
+    background-position: 0 6.5rem, 0 220.5rem, right 801.5rem
+    position: relative
+.Container
+    +container(120rem, 1.5rem, 1.5rem)
+.Block
+    @extend %block
+.VisuallyHidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    white-space: nowrap
+    clip-path: inset(100%)y
+    clip: rect(0 0 0 0)
+    overflow: hidden

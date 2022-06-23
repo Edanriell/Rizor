@@ -1,0 +1,35 @@
+.Technology
+    grid-area: technology
+    &-Header
+        margin-bottom: var(--subheader-margin)
+    &-Text
+        margin-bottom: var(--subheader-margin)
+    &-VideoPlayerPlayButton
+        transform: translate(-30%, -60%) !important
+.UsedTechnology
+    +flex(center, flex-start, row)
+    margin-top: 4rem
+    margin-bottom: 4rem
+    &-Column
+        +flex(flex-start, center, column)
+        &:first-child
+            margin-right: 10rem
+        &:nth-child(1)::before
+            content: ""
+            display: block
+            background: url("./../images/icons/icon-6.png") no-repeat center
+            width: 7.6rem
+            height: 6rem
+        &:nth-child(2)::before
+            content: ""
+            display: block
+            background: url("./../images/icons/icon-5.png") no-repeat center
+            width: 9.8rem
+            height: 6rem
+    &-Name
+        font-size: 1.4rem
+        color: var(--main)
+        opacity: 80%
+        font-family: var(--light-font)
+        width: 10rem
+        margin-top: 1.2rem

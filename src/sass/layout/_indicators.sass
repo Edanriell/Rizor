@@ -1,0 +1,19 @@
+.Indicators
+    grid-area: indicators
+    position: relative
+    &-Header
+        margin-bottom: var(--subheader-margin)
+    &-Text
+        margin-bottom: var(--subheader-margin)
+        &:nth-child(3)
+            margin-bottom: 3rem
+    &-VideoPlayer
+        margin-left: -4rem
+    &-VideoPlayerPlayButton
+        top: 12rem !important
+    &-VideoPlayerPlayButton::before
+        background: url("./../images/arrow-indicators.png") no-repeat center !important
+        width: 3.8rem !important
+        height: 36.2rem !important
+        top: -38rem !important
+        left: 1rem !important
